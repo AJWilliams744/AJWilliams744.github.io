@@ -1,5 +1,4 @@
-window.onload = function () {
-    var navbarItems = `
+var navbarItems = `
     <div class="title">
         <div class="header">
             <h3>Alex Williams</h3>
@@ -14,5 +13,4 @@ window.onload = function () {
         </div>
     </div>  
     `
-    document.getElementById("navbar-container").innerHTML = navbarItems;
-}
+document.getElementById("navbar-container").innerHTML = navbarItems;
