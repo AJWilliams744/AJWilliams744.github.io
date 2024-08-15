@@ -8,7 +8,7 @@ body {
 
 p {
     font-size: 1.5rem;
-    color: white;
+    color: #dddddd;
     margin-right: 70px;
     margin-left: 70px;
 }
@@ -17,27 +17,37 @@ h2 {
     font-size: 2rem;
     margin: 25px;
     color: black;
-    text-shadow: -1px -1px white,
-    1px -1px white,
-    -1px 1px white,
-    1px 1px white;
+    text-shadow: -1px -1px #dddddd,
+    1px -1px #dddddd,
+    -1px 1px #dddddd,
+    1px 1px #dddddd;
 }
 
 h3 {
     font-size: 4rem;
     margin: 25px;
     color: black;
-    text-shadow: -1px -1px white,
-    1px -1px white,
-    -1px 1px white,
-    1px 1px white;
+    text-shadow: -1px -1px #dddddd,
+    1px -1px #dddddd,
+    -1px 1px #dddddd,
+    1px 1px #dddddd;
 }
 
 h4 {
     font-size: 3.5rem;
-    color: white;
+    color: #dddddd;
     text-align: center;
     margin: 10px;
+    padding-top: 3px;
+}
+
+iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 100vh;
 }
 
 .header {
@@ -54,42 +64,43 @@ h4 {
 
 .topnav {
     background-color: #333;
-    overflow: hidden;
     display: flex;
     justify-content: space-around;
 }
 
 .topnav a {
-    float: left;
-    color: #f2f2f2;
+    color: #dddddd;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     font-size: 17px;
     width: 20%;
     transition: 0.6s;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: #dddddd;
     color: black;
     scale: 1.1;
 }
 
 .topnav a.active {
     background-color: #04AA6D;
-    color: white;
+    color: #dddddd;
 }
 
 .title {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0;
+    margin: 15px;
     height: 100%;
 }
 
 hr.rounded {
-    border-top: 8px solid #bbb;
+    border-top: 8px solid #a3a3a3;
     border-radius: 5px;
+    width: 90%;
 }
