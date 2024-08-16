@@ -9,8 +9,8 @@ var navbarItems = `
             <a class="nav" id="nav2">Released Games</a>
             <a class="nav"  id="nav3">Game Jams</a>
             <a href="animationShowreel.html"  class="nav" id="nav4">Animation Showreel</a>
-            <a href="photoshop.html" class="nav" id="nav4"> Photoshop</a>
-            <a class="nav">Experimental / Tutorial Projects</a>
+            <a href="photoshop.html" class="nav" id="nav5"> Photoshop</a>
+            <a class="nav" id="nav6">Experimental / Tutorial Projects</a>
         </div>
     </div>  
     `
@@ -33,6 +33,15 @@ for (let i = 0; i < navItems.length; i++) {
 
 const currentItem = document.getElementById(sessionStorage.getItem('current'));
 
-currentItem.classList.add('current');
-currentItem.classList.remove('nav');
-currentItem.classList.add('disableClick')
+if (currentItem == null) {
+    setCurrent(document.getElementById("nav1"));
+} else {
+    setCurrent(currentItem);
+}
+
+function setCurrent(currentItem) {
+    currentItem.classList.add('current');
+    currentItem.classList.remove('nav');
+    currentItem.classList.add('disableClick')
+}
+
