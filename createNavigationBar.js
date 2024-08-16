@@ -41,7 +41,6 @@ if (currentItem == null) {
 
 function setCurrent(currentItem) {
     currentItem.classList.add('current');
-    currentItem.classList.remove('nav');
     currentItem.classList.add('disableClick')
 }
 
