@@ -8,6 +8,7 @@ var navbarItems = `
             <a href="index.html" class="nav" id="nav1">About</a>
             <a class="nav" id="nav2">Released Games</a>
             <a class="nav"  id="nav3">Game Jams</a>
+            <a href="animationShowreel.html"  class="nav" id="nav4">Animation Showreel</a>
             <a href="photoshop.html" class="nav" id="nav4"> Photoshop</a>
             <a class="nav">Experimental / Tutorial Projects</a>
         </div>
