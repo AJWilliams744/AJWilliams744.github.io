@@ -4,6 +4,14 @@ body {
     background-color: black;
 }
 
+a {
+    text-decoration: none;
+}
+
+.disableClick {
+    pointer-events: none;
+}
+
 p {
     font-size: 1.5rem;
     color: #dddddd;
@@ -86,9 +94,17 @@ iframe {
     scale: 1.1;
 }
 
-.nav.current {
-    background-color: #04AA6D;
+.current {
     color: #dddddd;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 17px;
+    width: 20%;
+    transition: 0s;
+    background-color: #04AA6D;
 }
 
 .title {

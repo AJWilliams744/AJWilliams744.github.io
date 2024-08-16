@@ -5,12 +5,33 @@ var navbarItems = `
             <h2>Portfolio Website</h2>
         </div>
         <div class="topnav">
-            <a href="index.html" class="nav">About</a>
-            <a class="nav">Released Games</a>
-            <a class="nav">Game Jams</a>
-            <a href="photoshop.html" class="nav"> Photoshop</a>
+            <a href="index.html" class="nav" id="nav1">About</a>
+            <a class="nav" id="nav2">Released Games</a>
+            <a class="nav"  id="nav3">Game Jams</a>
+            <a href="photoshop.html" class="nav" id="nav4"> Photoshop</a>
             <a class="nav">Experimental / Tutorial Projects</a>
         </div>
     </div>  
     `
 document.getElementById("navbar-container").innerHTML = navbarItems;
+
+
+const navItems = document.querySelectorAll('.nav');
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener("click", function () {
+        Array.from(navItems, navItem => {
+            navItem.classList.remove('current');
+        });
+
+        navItems[i].classList.add('current');
+
+        console.log(navItems[i].classList);
+        sessionStorage.setItem('current', navItems[i].id);
+    });
+}
+
+const currentItem = document.getElementById(sessionStorage.getItem('current'));
+
+currentItem.classList.add('current');
+currentItem.classList.remove('nav');
+currentItem.classList.add('disableClick')
