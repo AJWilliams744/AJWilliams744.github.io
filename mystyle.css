@@ -12,6 +12,18 @@ a {
     pointer-events: none;
 }
 
+.threePhoto img {
+    width: 290px;
+    height: 390px;
+    padding: 15px;
+    object-fit: contain;
+}
+
+.threePhoto {
+    display: flex;
+    justify-content: center;
+}
+
 p {
     font-size: 1.5rem;
     color: #dddddd;
