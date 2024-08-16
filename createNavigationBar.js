@@ -21,12 +21,12 @@ const navItems = document.querySelectorAll('.nav');
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("click", function () {
         Array.from(navItems, navItem => {
-            navItem.classList.remove('current');
+            removeCurrent(navItem);
         });
 
-        navItems[i].classList.add('current');
+        setCurrent(navItems[i]);
 
-        console.log(navItems[i].classList);
+
         sessionStorage.setItem('current', navItems[i].id);
     });
 }
@@ -42,5 +42,10 @@ if (currentItem == null) {
 function setCurrent(currentItem) {
     currentItem.classList.add('current');
     currentItem.classList.add('disableClick')
+}
+
+function removeCurrent(currentItem) {
+    currentItem.classList.remove('current');
+    currentItem.classList.remove('disableClick')
 }
 
