@@ -11,41 +11,72 @@
     <div id="navbar-container">
     </div>
     <div>
-        <h4>Photoshop Art</h4>
-        <p>
-            This is where examples of my artwork with photoshop are shown, these have been made using reference art
-            pieces.
-        </p>
-    </div>
-    <hr class="rounded">
-    <div>
-        <h4>2D Art</h4>
-        <p>
-            I wanted to expand on my skills with photoshop for games so I decided to research 2D background art and
-            single pane images that could be used for title screens. After following some tutorials and finding some
-            images I wanted to see if I could recreate some of the artwork I'd seen during my research. These are the
-            results.
-        </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/NightLake.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/MoonForest.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/RedMountain.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/ThreeDHouse.png" alt="Images/ForestHeader.jpg">
+        <h4>Cube Mayhem (UE4)</h4>
+        <div id="duckStoreMain">
+            <iframe id="itch" src="https://itch.io/embed/657374?dark=true">
+            </iframe>
         </div>
     </div>
-    <hr class="rounded">
     <div>
-        <h4>VFX Textures</h4>
+        <h1>About</h1>
         <p>
-            These textures were created for a fire VFX explosion in UE4, the black has been added to make the texture
-            more visible, normally they would be transparent.
+            This game was created during the GameDev.TV game jam that lasted one month. The theme of this jam was "Time"
+            and we could use any software, tools and assets as long as the assets were free. This game jam was a solo
+            creation.
         </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/Beam.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact2.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact3.jpg" alt="Images/ForestHeader.jpg">
+        <div class="threePhotoWide">
+            <img src="Images/CubeMayhem/shot1.png" alt="Images/ForestHeader.jpg">
+            <img src="Images/CubeMayhem/shot2.png" alt="Images/ForestHeader.jpg">
+            <img src="Images/CubeMayhem/shot3.png" alt="Images/ForestHeader.jpg">
         </div>
+        <iframe id="youtubeLink" src="https://www.youtube.com/embed/gBR-yJdgZV4?si=KUw19xHTMAMFqiIK" allowfullscreen>
+        </iframe>
     </div>
+    <h1>Introduction</h1>
+    <p>
+        As this was the first game jam I started from scratch with a project, I wanted to limit the amount of
+        third-party content as best I could. I has just recently completed a course on twin stick shooters, and I wanted
+        to incorporate what I learnt from that course into my own project.
+    </p>
+    <h1>Weapon Design
+    </h1>
+    <p>
+        I wanted to create a game that was satisfying to play and satisfying to shoot. Once I created a basic movement
+        system and basic enemy AI I worked on the gun. Originally, I wanted to have weapon pickups throughout the level
+        however I decided to incorporate 3 basic weapons and add more if I had time at the end. I needed to create
+        weapons that were different enough where the user would not get confused on when to use them, so I decided to go
+        to the extremes of fire rate, damage and delay. My First weapon would fire fast but do-little damage, the second
+        weapon would fire modestly but have a high damage and a small slash zone. The last weapon would wipe the screen
+        of all enemies but have an increased delay on use. To stop the user from just using the screen wipe aggressively
+        I removed its ability to score points, it should just be used as a last resort.
+    </p>
+    <h1>
+        Weapon Feedback
+    </h1>
+    <p>
+        In order to increase satisfaction, weapon sounds and weapon feedback needed to align with the expectation of
+        weapon style. Weapons need to create a sound on fire and on collision. Sounds and music was an area I had very
+        little knowledge about, so I used third part assets. The screen clear weapon needed a charge up to emphasise the
+        power of the weapon. All sounds needed to be distinct enough that the user could tell what weapon is fired just
+        down to the sounds and the controller vibration.
+    </p>
+    <h1>
+        Enemies
+    </h1>
+    <p>
+        I struggled with the creation of enemy’s, I knew I needed variation and scaling in order to keep the user
+        engaged so I decided to use a clock to designate enemy types and when they would spawn. The different colours
+        have varying stats to encourage the user to approach them in a different way.
+    </p>
+    <h1>
+        Finishing Touches
+    </h1>
+    <p>
+        The final touch was to add particle systems. This was an area I was looking forward to, I find when done
+        properly they can add so much to the game even though they are just purely visual. Adding particles to the enemy
+        deaths gave the impact of the heavy weapons much more impact and meaning. The small shots caused the enemy to
+        send particles in all directions while the heavy shots fired the particles in the directions of the bullet.
+    </p>
 </div>
 </body>
 </html>

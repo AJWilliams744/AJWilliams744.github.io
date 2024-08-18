@@ -34,7 +34,7 @@ a {
     border: none;
 }
 
-.threePhoto {
+.threePhoto, .threePhotoWide {
     display: flex;
     justify-content: center;
 }
