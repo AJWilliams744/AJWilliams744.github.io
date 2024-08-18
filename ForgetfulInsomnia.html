@@ -11,7 +11,7 @@
     <div id="navbar-container">
     </div>
     <div>
-        <h4>Photoshop Art</h4>
+        <h4>Forgetful Insomnia</h4>
         <div id="duckStoreMain">
             <iframe id="itch" src="https://itch.io/embed/554970?dark=true">
             </iframe>
@@ -34,9 +34,71 @@
     </div>
     <h1>Introduction</h1>
     <p>
-        These textures were created for a fire VFX explosion in UE4, the black has been added to make the texture
-        more visible, normally they would be transparent.
+        My best idea that I wanted to try was a game that used two cameras to play, I’d done some work previously
+        creating stereoscopic applications so I wanted to see if I could make a game using the same techniques. My first
+        few attempts failed massively which lead to me settling on a smaller camera and a main one. After some testing
+        with the camera culling masks and layers I decided I wanted to make a horror game.
     </p>
+    <h1>Start Scene - Video
+    </h1>
+    <p>
+        After some tweaking of the character rigs in Unity I could place any Mixamo animation onto the character model
+        given. I wanted a video as a teaser to introduce the game before you would play it to give the game the correct
+        atmosphere for the player. Using the assets from Snaps Prototype and the fog from Aura 2 I created a scene that
+        would be the base for the video. After placing in the characters given, adding in the animations from Mixamo
+        controlled by the timeline I could try the Cinemachine Plugin. This took some trial and error before I was happy
+        with the result. Due to time restraints I didn’t have time to learn how to create cutscenes in Unity, so I
+        recorded the play footage from the scene and placed the video in HitFilm Express. After overlaying some music
+        from the Music Bundle I bought and cuts for text information, the intro video was finished.
+    </p>
+    <h1>
+        Main Scene - Game
+    </h1>
+    <p>
+        This scene where I spent most of my time. My first big change was to improve look of the environment. Using the
+        floor prefab, I added in a wall and randomized the rotation. Changing the pathfinding to not walk through walls
+        was the biggest challenge I faced. After many days of trial and error I improved the pathfinding to check the
+        rotation of neighbouring tiles and work out if it was facing a wall. Next came improving the atmosphere, I
+        created a torch and a backpack in Blender to give to the player while reducing all lights so you can only see
+        using the player moved lights. To increase variety, I added in a counter for randomly rotating tiles and enemy
+        movement that used the path finding previously created. The final addition was the sound design, for me choosing
+        the right music plays a huge part in aiding the atmosphere created by the environment and story. After searching
+        through the music I owned I settled on a cheerful piece for the menu and a dark background for the main game.
+        After some splicing of miscellaneous sounds and randomizing the start of the enemy sounds, to stop additive
+        sounds, the sound design was at a level I could be happy with.
+    </p>
+    <h1>
+        Second Scene - Puzzle
+    </h1>
+    <p>
+        The most important part I left to the end of the project. This was not intentional as during playtesting of
+        previous scenes I found that there was no goal, no reason to keep playing. Just surviving was not enough. During
+        this phase I added in doors with numbers on, these numbers linked between scenes and were vital. Using a water
+        shader from the standard assets as the floor and randomly placing doors to get the player to search for the
+        correct numbers. To create a sense of urgency the walls close in and increase in size. Due to time restraints I
+        decided to use the first-person controller for movement, I wanted to make one but creating my own would not
+        showcase any programming skills and I could spend my time improving the rest of the game. After this I added the
+        doors with pedestals and keys into the previous scenes as a form of progression.
+    </p>
+    <h1>
+        Out Scene - Video
+    </h1>
+    <p>
+        After some tweaking of the previous cutscene I added in a zoom into a zombie den. Creating the audio during the
+        cutscene was a lot of fun, using HitFilm I spliced 4 different sounds from the Music Bundle with changes in
+        volume to fade out into the music for the outro.
+    </p>
+    <h1>
+        Third Party Assets
+    </h1>
+    <ul>
+        <li>Animations from Mixamo</li>
+        <li>Audio</li>
+        <li>Door Texture</li>
+        <li>First Person Controller (Plugin)</li>
+        <li>Aura 2 (Plugin)</li>
+        <li>Snaps Prototype (Plugin)</li>
+    </ul>
 </div>
 </body>
 </html>

@@ -32,7 +32,7 @@ a {
     justify-content: center;
 }
 
-p {
+p, li {
     font-size: 1.5rem;
     color: #dddddd;
     margin-right: 70px;
@@ -46,6 +46,8 @@ h1 {
     padding-top: 3px;
     display: flex;
     margin-left: 5%;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 h2 {
