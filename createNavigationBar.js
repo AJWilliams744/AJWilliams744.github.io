@@ -7,19 +7,25 @@ var navbarItems = `
         <div class="topnav">
             <a href="index.html" class="nav" id="nav1">About</a>
             <div class="dropdown">
-                <button class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
-                </button>
-            <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+                <button class="dropbtn">Released Games</button>
+                <div class="dropdown-content">
+                    <a href="#">Duck Life 9 (Wix-Games - Unity)</a>
+                </div>
             </div>
-        </div>
-            <a class="nav"  id="nav3">Game Jams</a>
+             <div class="dropdown">
+                <button class="dropbtn">Game Jams</button>
+                <div class="dropdown-content">
+                    <a href="#">Wander</a>
+                </div>
+            </div>
             <a href="animationShowreel.html"  class="nav" id="nav4">Animation Showreel</a>
             <a href="photoshop.html" class="nav" id="nav5"> Photoshop</a>
-            <a class="nav" id="nav6">Experimental / Tutorial Projects</a>
+             <div class="dropdown">
+                <button class="dropbtn">Experimental / Tutorial Projects</button>
+                <div class="dropdown-content">
+                    <a href="#">Duck Life 9 (Wix-Games - Unity)</a>
+                </div>
+            </div>
         </div>
     </div>  
     `
