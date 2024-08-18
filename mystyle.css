@@ -330,6 +330,8 @@ object.inject {
 
 .mySlides img {
     width: 100%;
+    height: 400px;
+    object-fit: contain;
 }
 
 .numbertext {
@@ -352,4 +354,13 @@ object.inject {
     to {
         opacity: 1
     }
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+}
+
+.split p, .split .slideshow-container {
+    width: 50%;
 }
