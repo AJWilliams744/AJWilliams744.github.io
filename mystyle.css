@@ -225,8 +225,7 @@ object.inject {
     display: none;
     position: absolute;
     background-color: #dddddd;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 13.7%;
     z-index: 1;
 }
 
@@ -237,7 +236,7 @@ object.inject {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: center;
     transition: 0.2s;
 }
 
