@@ -11,41 +11,137 @@
     <div id="navbar-container">
     </div>
     <div>
-        <h4>Photoshop Art</h4>
-        <p>
-            This is where examples of my artwork with photoshop are shown, these have been made using reference art
-            pieces.
-        </p>
-    </div>
-    <hr class="rounded">
-    <div>
-        <h4>2D Art</h4>
-        <p>
-            I wanted to expand on my skills with photoshop for games so I decided to research 2D background art and
-            single pane images that could be used for title screens. After following some tutorials and finding some
-            images I wanted to see if I could recreate some of the artwork I'd seen during my research. These are the
-            results.
-        </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/NightLake.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/MoonForest.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/RedMountain.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/ThreeDHouse.png" alt="Images/ForestHeader.jpg">
+        <h4>Wanderer</h4>
+        <div id="duckStoreMain">
+            <iframe id="itch" src="https://itch.io/embed/857706?dark=true">
+            </iframe>
         </div>
     </div>
-    <hr class="rounded">
     <div>
-        <h4>VFX Textures</h4>
+        <h1>Intro</h1>
         <p>
-            These textures were created for a fire VFX explosion in UE4, the black has been added to make the texture
-            more visible, normally they would be transparent.
+            As this was the last competition that I could enter before finishing Uni I wanted to showcase and learn the
+            skills I most wanted to use. Due to this I wanted to focus my game around graphics. I wanted each level of
+            my game to look completely different from any of the previous levels that had come. I knew this was going to
+            be a challenge so I decided to make one level at a time and see how many levels I could get through in the
+            time I’d been given. This game jam was a solo creation.
         </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/Beam.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact2.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact3.jpg" alt="Images/ForestHeader.jpg">
+        <div class="threePhotoWide">
+            <img src="Images/Wanderer/gif1.gif" alt="Images/ForestHeader.jpg">
+            <img src="Images/Wanderer/gif2.gif" alt="Images/ForestHeader.jpg">
+            <img src="Images/Wanderer/gif3.gif" alt="Images/ForestHeader.jpg">
         </div>
+        <iframe id="youtubeLink" src="https://www.youtube.com/embed/d8j4DxCMcDM?si=8V1Zm8u53kFi30ae" allowfullscreen>
+        </iframe>
     </div>
+    <h1>Ideas and Research</h1>
+    <p>
+        The first part of research was to explore different art styles. A game that stood out to me the most for this
+        was Lies Beneath (a VR game). The way the main light interacted with the environment was something I’d not seen
+        before. Instead of a gradual gradient, it worked with bands. Each band has its own strength, meaning a more flat
+        lighting style, similar to a toon style. This created a very tense atmosphere and got the player to search with
+        the light rather than just walking around.<br><br>
+
+        The second style I found was a simple outline style. I knew I wouldn’t have time to create textures for all of
+        the objects so I planned to just use basic colours. This is why the outline is so important as it’s to make sure
+        the scenes don’t look uninteresting to look at. In order to create these shaders I knew I needed to use the
+        shader graph plugin, which meant I also needed access to the render pipeline to apply global shaders
+        effectively. In order to do this I needed to update the project to the Universal Render Pipeline.<br><br>
+
+        I decided to stop my research here and start working on the plan for the dimensions. I wanted to get these two
+        dimensions completed before researching another style. This was to keep the scale down but still allow it to
+        expand if completed early enough. I didn’t want to start big and go small but rather start small and go big.
+    </p>
+    <h1>Outline Design Plan
+    </h1>
+    <p>
+        My first plan was to experiment with the story system and the Game script given at the start of the project to
+        see what it’s initial limitations were. From this I wanted to have a different script for each level so I
+        changed the name of the data in the editor script to “base script”, whenever I renamed old data the editor
+        script would create another blank one for me.<br><br>
+
+        Another feature I wanted to add was a note system. My first idea was to create a prefab which would store the
+        data and use a global script to collect all the notes at the start of the level. However after a while I decided
+        I wanted to be able to edit the notes from anywhere and not just from the scene itself, so I put the notes
+        system inside the story data.<br><br>
+
+        The next feature to decide on was the graphics, I was a bit unsure on how to create this so I experimented on
+        another project until I got the desired result. I always end up creating many unused scripts and shaders so re
+        creating it in the main project kept redundant data low.<br><br>
+
+        Lastly to make each level interesting I wanted to create puzzles or challenges that would need to be completed.
+        A game isn’t much if the player doesn’t have anything to do. This is the point I decided to add a gift system.
+        The only way to attract to both hardcore and causal players is to create different ways of completing a puzzle.
+        If I allowed the player to choose between a hard choice and an easier choice, both players would be
+        satisfied.<br><br>
+
+        I had one more puzzle planned however I ran out of time to implement it. This puzzle was a finished part of a
+        chess board played with giant pieces. You would move the final piece to put your opponent into checkmate, the
+        gift would reveal a mirror in the ceiling showing you the whole board from an eagle eye view.
+    </p>
+    <h1>
+        Problems / Notes
+    </h1>
+    <p>
+        The first version of the outline shader was created for use in the pipeline, however I had to include the base
+        colour of the object inside the shader as there was no way to allow for inputs when using the shader on the
+        pipeline. To counteract this I converted it to a material shader, but when I did this the effect changed and the
+        outline covered the whole shape. After spending an afternoon trying to fix it I was running out of time. In
+        order to fix this I changed the shader back to a pipeline shader and then changed the render settings from
+        opaque to transparent, inverted the mask for the outline and plugged that into transparency. This meant I could
+        apply any material on top of the shader allowing me to customise the style of the scene further.<br><br>
+
+        To get the lighting shader I wanted, it required me to get the lighting data which Unity currently had no easy
+        way to get. To do this I created a custom cginc file that took the objects world position, compared it to the
+        main light and then returned its lighting strength and direction. Once I had found the NDotL value, multiplied
+        that by the colour and lighting strength it would correctly shade itself according to the main light. Using the
+        same concept I got all of the additional lighting data and added the two values together for a complete shading
+        on the object. This however didn’t take into account other objects that may be in between the object and the
+        light source, maybe a theme to explore in another project.<br><br>
+
+        Now I have the lighting data of the object I could use it in my toon shader, however I only wanted the intensity
+        of the light and not the colour.<br><br>
+
+        Towards the end of the project I had to rush the coding on scripts so I only had the time to get the scripts
+        working rather than getting them sustainable. If I had more time there are a few scripts I would split into
+        individual scripts and a few others I would link through inheritance. I would also like to explore some of the
+        interfaces I created, as with further experimenting I feel that they could be modified and moved into scripts
+        that were inherited instead.<br><br>
+    </p>
+    <h1>
+        Summary
+    </h1>
+    <p>
+        Overall I would say that I had a really good game jam, I achieved all of the goals I had set out and I didn’t
+        try to create a project that I couldn’t finish. My only criticism is that the risks for completing a project
+        with a challenging theme on top of my uni work were too high. The reduced scope of this project needed to fit
+        the compressed deadline I had to adhere to. However, learning how to create a lighting shader and a procedural
+        fire shader was very interesting and fun, I will be exploring those types of shaders more in the future so I can
+        use them in future projects that I make.
+    </p>
+    <h1>
+        Out Scene - Video
+    </h1>
+    <p>
+        After some tweaking of the previous cutscene I added in a zoom into a zombie den. Creating the audio during the
+        cutscene was a lot of fun, using HitFilm I spliced 4 different sounds from the Music Bundle with changes in
+        volume to fade out into the music for the outro.
+    </p>
+    <h1>
+        Third Party Assets
+    </h1>
+    <ul>
+        <li>Downloaded Assets</li>
+        <li>Audio (FreeSounds.org + purchased music)</li>
+        <li>Fonts (1000FreeFonts)</li>
+        <li>Software Tools</li>
+        <li>Blender</li>
+        <li>Audacity</li>
+        <li>Photoshop</li>
+        <li>Git Bash</li>
+        <li>Plugins</li>
+        <li>Universal Render Pipeline Shader Graph</li>
+    </ul>
 </div>
 </body>
 </html>

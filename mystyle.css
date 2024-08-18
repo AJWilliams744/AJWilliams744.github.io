@@ -19,6 +19,13 @@ a {
     object-fit: contain;
 }
 
+.threePhotoWide img {
+    width: 400px;
+    height: 350px;
+    padding: 15px;
+    object-fit: contain;
+}
+
 .threePhoto iframe {
     width: 500px;
     height: 450px;
