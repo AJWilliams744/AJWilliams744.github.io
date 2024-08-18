@@ -6,7 +6,16 @@ var navbarItems = `
         </div>
         <div class="topnav">
             <a href="index.html" class="nav" id="nav1">About</a>
-            <a class="nav" id="nav2">Released Games</a>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            </div>
+        </div>
             <a class="nav"  id="nav3">Game Jams</a>
             <a href="animationShowreel.html"  class="nav" id="nav4">Animation Showreel</a>
             <a href="photoshop.html" class="nav" id="nav5"> Photoshop</a>
