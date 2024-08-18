@@ -9,25 +9,25 @@ var navbarItems = `
             <div class="dropdown">
                 <button class="dropbtn">Released Games</button>
                 <div class="dropdown-content">
-                    <a href="DuckLife9.html">Duck Life 9 (Wix-Games - Unity)</a>
+                    <a href="DuckLife9.html" class="drp" id="nav2">Duck Life 9 (Wix-Games - Unity)</a>
                 </div>
             </div>
              <div class="dropdown">
                 <button class="dropbtn">Game Jams</button>
                 <div class="dropdown-content">
-                    <a href="Wanderer.html">Wander (Unity)</a>
-                    <a href="CubeMayhem.html">Cube Mayhem (UE4)</a>
-                    <a href="ForgetfulInsomnia.html">Forgetful Insomnia (Unity)</a>
-                    <a href="LastLineLives.html">Last Line Lives (UE4)</a>
+                    <a href="Wanderer.html" class="drp" id="nav3">Wander (Unity)</a>
+                    <a href="CubeMayhem.html" class="drp" id="nav4">Cube Mayhem (UE4)</a>
+                    <a href="ForgetfulInsomnia.html" class="drp" id="nav5">Forgetful Insomnia (Unity)</a>
+                    <a href="LastLineLives.html" class="drp" id="nav6">Last Line Lives (UE4)</a>
                 </div>
             </div>
-            <a href="animationShowreel.html"  class="nav" id="nav4">Animation Showreel</a>
-            <a href="photoshop.html" class="nav" id="nav5"> Photoshop</a>
+            <a href="animationShowreel.html"  class="nav" id="nav7">Animation Showreel</a>
+            <a href="photoshop.html" class="nav" id="nav8"> Photoshop</a>
              <div class="dropdown">
                 <button class="dropbtn">Experimental / Tutorial Projects</button>
                 <div class="dropdown-content">
-                    <a href="UnrealWorkshop.html">Unreal Workshop</a>
-                    <a href="Pinball.html">Pinball</a>
+                    <a href="UnrealWorkshop.html" class="drp" id="nav9">Unreal Workshop</a>
+                    <a href="Pinball.html" class="drp" id="nav10">Pinball</a>
                 </div>
             </div>
         </div>
@@ -37,16 +37,18 @@ document.getElementById("navbar-container").innerHTML = navbarItems;
 
 
 const navItems = document.querySelectorAll('.nav');
-for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener("click", function () {
-        Array.from(navItems, navItem => {
+const navItems2 = document.querySelectorAll('.drp');
+const allNavItems = [...navItems, ...navItems2];
+
+for (let i = 0; i < allNavItems.length; i++) {
+    allNavItems[i].addEventListener("click", function () {
+        Array.from(allNavItems, navItem => {
             removeCurrent(navItem);
         });
 
-        setCurrent(navItems[i]);
+        setCurrent(allNavItems[i]);
 
-
-        sessionStorage.setItem('current', navItems[i].id);
+        sessionStorage.setItem('current', allNavItems[i].id);
     });
 }
 

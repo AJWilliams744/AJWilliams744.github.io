@@ -19,6 +19,14 @@ a {
     object-fit: contain;
 }
 
+.threePhoto iframe {
+    width: 500px;
+    height: 450px;
+    padding: 15px;
+    object-fit: contain;
+    border: none;
+}
+
 .threePhoto {
     display: flex;
     justify-content: center;
@@ -29,6 +37,15 @@ p {
     color: #dddddd;
     margin-right: 70px;
     margin-left: 70px;
+}
+
+h1 {
+    font-size: 2.7rem;
+    color: #dddddd;
+    text-align: center;
+    padding-top: 3px;
+    display: flex;
+    margin-left: 5%;
 }
 
 h2 {
@@ -145,7 +162,7 @@ h4 {
     color: black;
 }
 
-.current {
+.nav.current {
     color: #dddddd;
     text-align: center;
     display: flex;
@@ -155,6 +172,25 @@ h4 {
     font-size: 17px;
     width: 20%;
     transition: 0s;
+    background-color: #04AA6D;
+}
+
+#itch {
+    width: 80%;
+    height: 100%;
+    border: none;
+    justify-content: center;
+    display: flex;
+    background-size: contain;
+}
+
+.drp.current {
+    color: #dddddd;
+    background-color: #04AA6D;
+}
+
+.dropbtn.current {
+    color: #dddddd;
     background-color: #04AA6D;
 }
 
@@ -198,8 +234,8 @@ object.inject {
     grid-template-columns: 20% 80%;
     background-color: #a3a3a3;
     padding: 10px;
-    margin-top: 35px;
-    margin-bottom: 20px;
+    margin: auto;
+    width: 90%;
 }
 
 .grid-item {
