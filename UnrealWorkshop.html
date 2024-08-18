@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PhotoshopProjects</title>
+    <title>Unreal Workshop</title>
     <link rel="stylesheet" href="mystyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,41 +11,56 @@
     <div id="navbar-container">
     </div>
     <div>
-        <h4>Photoshop Art</h4>
+        <h4>Unreal Workshop</h4>
+    </div>
+    <div>
+        <h1>About</h1>
         <p>
-            This is where examples of my artwork with photoshop are shown, these have been made using reference art
-            pieces.
+            This project was created over a 4 week period using Unreals workshop as a guide, including other smaller
+            guides found on the internet.
         </p>
     </div>
     <hr class="rounded">
-    <div>
-        <h4>2D Art</h4>
-        <p>
-            I wanted to expand on my skills with photoshop for games so I decided to research 2D background art and
-            single pane images that could be used for title screens. After following some tutorials and finding some
-            images I wanted to see if I could recreate some of the artwork I'd seen during my research. These are the
-            results.
-        </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/NightLake.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/MoonForest.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/RedMountain.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/ThreeDHouse.png" alt="Images/ForestHeader.jpg">
-        </div>
-    </div>
+    <h1>Week 1</h1>
+    <p>
+        First week was to learn how to use the third person template and basic blueprints. I decided to add an avatar
+        downloaded from Mixamo and learn how to use the animation blueprint for basic movement including a roll. Final
+        addition for the week I added a grapple hook and basic ragdoll physics.
+    </p>
     <hr class="rounded">
-    <div>
-        <h4>VFX Textures</h4>
-        <p>
-            These textures were created for a fire VFX explosion in UE4, the black has been added to make the texture
-            more visible, normally they would be transparent.
-        </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/Beam.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact2.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact3.jpg" alt="Images/ForestHeader.jpg">
-        </div>
-    </div>
+    <h1>Week 2
+    </h1>
+    <p>
+        This week started off with adding pickups that do something when the user walked into the trigger box, for this
+        example I changed the jump height of the character on pickup. The largest addition was the use of event
+        dispatchers to cause events to trigger throughout the blueprints. Finally, I added a trigger to the fire
+        particle system from the starter content to trigger when a character walked inside the range and set the
+        character on fire.<br><br>
+
+        This week had to be cut short to allow for some planning for the upcoming game jam.
+    </p>
+    <hr class="rounded">
+    <h1>
+        Week 3
+    </h1>
+    <p>
+        Week 3 started with adding menu systems to the game such as a main menu and a pause menu. Once the menus were in
+        the environment was looking very plain so I decided to look into the foliage tool and landscape materials. This
+        is where I learned how to create a procedural terrain painter that worked of the angle of the ground. Using the
+        materials for the terrain I could also add small foliage that only spawned on the green land.<br><br>
+
+        Lastly for the week was to add a Hud with health and a scoring system using the coins.
+    </p>
+    <hr class="rounded">
+    <h1>
+        Week 4
+    </h1>
+    <p>
+        This week was all about AI, following the mini course I created a basic twin stick shooter. During this I learnt
+        how to use blackboard, behaviour trees and AI components. I created a basic AI that would chase the player
+        wherever he is on the map. On contact the enemy would do damage to the player who would die after a certain
+        amount of damage was sustained.
+    </p>
 </div>
 </body>
 </html>
