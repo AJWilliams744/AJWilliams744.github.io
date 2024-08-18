@@ -1,22 +1,26 @@
-let slideIndex = 0;
-showSlides();
+let slideIndex = [];
 
-function showSlides() {
+const slideShowContainers = document.getElementsByClassName("slideshow-container");
+
+for (i = 0; i < slideShowContainers.length; i++) {
+    slideIndex.push(0)
+    showSlides(slideShowContainers[i], i);
+}
+
+function showSlides(slideShow, index) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = slideShow.getElementsByClassName("mySlides");
 
     for (i = 0; i < slides.length; i++) {
         if (slides[i].classList.contains("in")) slides[i].classList.remove("in");
     }
 
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
+    slideIndex[index]++;
+    if (slideIndex[index] > slides.length) {
+        slideIndex[index] = 1
     }
 
+    slides[slideIndex[index] - 1].classList.add("in");
 
-    slides[slideIndex - 1].classList.add("in");
-
-
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(() => showSlides(slideShow, index), (Math.random() * 500) + 2000); // Change image every 2 seconds
 }
