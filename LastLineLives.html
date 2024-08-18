@@ -11,41 +11,51 @@
     <div id="navbar-container">
     </div>
     <div>
-        <h4>Photoshop Art</h4>
-        <p>
-            This is where examples of my artwork with photoshop are shown, these have been made using reference art
-            pieces.
-        </p>
-    </div>
-    <hr class="rounded">
-    <div>
-        <h4>2D Art</h4>
-        <p>
-            I wanted to expand on my skills with photoshop for games so I decided to research 2D background art and
-            single pane images that could be used for title screens. After following some tutorials and finding some
-            images I wanted to see if I could recreate some of the artwork I'd seen during my research. These are the
-            results.
-        </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/NightLake.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/MoonForest.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/RedMountain.png" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/ThreeDHouse.png" alt="Images/ForestHeader.jpg">
+        <h4>Last Line Lives (UE4)</h4>
+        <div id="duckStoreMain">
+            <iframe id="itch" src="https://itch.io/embed/676987?dark=true">
+            </iframe>
         </div>
     </div>
-    <hr class="rounded">
     <div>
-        <h4>VFX Textures</h4>
+        <h1>About</h1>
         <p>
-            These textures were created for a fire VFX explosion in UE4, the black has been added to make the texture
-            more visible, normally they would be transparent.
+            This game was created during the Side Quest #4 Game Jam that lasted one week. The theme of this jam was "One
+            Room" and was sponsored by MediaTonic. This game jam was a solo creation.
         </p>
-        <div class="threePhoto">
-            <img src="Images/Photoshop/Beam.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact2.jpg" alt="Images/ForestHeader.jpg">
-            <img src="Images/Photoshop/FireImpact3.jpg" alt="Images/ForestHeader.jpg">
+        <div class="threePhotoWide">
+            <img src="Images/LastLineLives/photo2.png" alt="Images/ForestHeader.jpg">
+            <img src="Images/LastLineLives/logo.png" alt="Images/ForestHeader.jpg">
+            <img src="Images/LastLineLives/photo3.png" alt="Images/ForestHeader.jpg">
         </div>
     </div>
+    <h1>Introduction</h1>
+    <p>
+        My original idea was to create a five night in Freddy’s inspired game with the main wall used as a video feed.
+        After some experimenting, I decided that I wouldn't be able to complete the project of that scale with enough
+        polish, so I decided to strip some features and abstract the idea further.
+    </p>
+    <h1>Movement
+    </h1>
+    <p>
+        I struggled with the movement. There needed to be a goal. As you could only move in 3 directions, I decided to
+        spawn the player on the left and get them to travel to the far side of the board. The first iteration got the
+        player to travel to a corridor each time to travel, however after some testing, I found this feature to be
+        tedious, so it was changed to only changing the direction. Between board ticks the player keeps moving in the
+        same direction.
+    </p>
+    <h1>
+        Enemies
+    </h1>
+    <p>
+        In order to keep the monsters scary, I wanted to keep the visibility of the monster down to a minimum. Due to
+        the dark nature of the game I could just apply a black material to the monster, and this make it look like a
+        silhouette/ shadow rather than a blocked-out monster. To increase the impact of the monster I decided to kill
+        all music, add a breathing sound and reduce the lights to a dim red. <br><br>
+
+        In order to survive the monster you have to close the door of the corridor that it appears in, this gets the
+        player to run towards the monster which most players won’t want to do.
+    </p>
 </div>
 </body>
 </html>
