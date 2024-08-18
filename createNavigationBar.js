@@ -9,13 +9,16 @@ var navbarItems = `
             <div class="dropdown">
                 <button class="dropbtn">Released Games</button>
                 <div class="dropdown-content">
-                    <a href="#">Duck Life 9 (Wix-Games - Unity)</a>
+                    <a href="DuckLife9.html">Duck Life 9 (Wix-Games - Unity)</a>
                 </div>
             </div>
              <div class="dropdown">
                 <button class="dropbtn">Game Jams</button>
                 <div class="dropdown-content">
-                    <a href="#">Wander</a>
+                    <a href="Wanderer.html">Wander (Unity)</a>
+                    <a href="CubeMayhem.html">Cube Mayhem (UE4)</a>
+                    <a href="ForgetfulInsomnia.html">Forgetful Insomnia (Unity)</a>
+                    <a href="LastLineLives.html">Last Line Lives (UE4)</a>
                 </div>
             </div>
             <a href="animationShowreel.html"  class="nav" id="nav4">Animation Showreel</a>
@@ -23,7 +26,8 @@ var navbarItems = `
              <div class="dropdown">
                 <button class="dropbtn">Experimental / Tutorial Projects</button>
                 <div class="dropdown-content">
-                    <a href="#">Duck Life 9 (Wix-Games - Unity)</a>
+                    <a href="UnrealWorkshop.html">Unreal Workshop</a>
+                    <a href="Pinball.html">Pinball</a>
                 </div>
             </div>
         </div>
